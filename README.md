@@ -112,4 +112,4 @@ Cyber Security Support Engineer
 
 ## 📄 License
 
-[MIT](LICENSE)
+MIT
