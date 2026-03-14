@@ -89,7 +89,7 @@ acronis-va-filter-automation/
 
 1. **Office Script** — Open Excel Online, go to Automate > New Script, paste the contents of `filter-va-devices.ts`, and save as `Filter VA Devices`
 2. **Power Automate** — Create a new flow using the "When a new email arrives (V3)" trigger, configure the three steps as documented above, and reference the saved Office Script
-3. **SharePoint** — Ensure the target folder `/Documents/01. Acronis/VA Devices Reports` exists and the flow has appropriate permissions
+3. **SharePoint** — Ensure the target folder exists and the flow has appropriate permissions
 
 ---
 
