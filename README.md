@@ -1,6 +1,6 @@
 # 🔄 Acronis Virtual Appliance Device Report Automation
 
-An end-to-end, zero-touch automation that filters the monthly Acronis full device list report and delivers a clean, Virtual Aplliances-only Excel file to SharePoint — entirely within Microsoft 365, at no additional cost.
+An end-to-end, zero-touch automation that filters the monthly Acronis full device list report and delivers a clean, Virtual Appliances-only Excel file to SharePoint — entirely within Microsoft 365, at no additional cost.
 
 ---
 
@@ -54,7 +54,7 @@ The flow consists of three core actions:
 
 | Step | Action | Detail |
 |------|--------|--------|
-| 1 | **Trigger** | "When a new email arrives (V3)" — watches for emails from `noreply-abc@cloud.acronis.com` with subject containing `"DAILY REPORT ON"`. A Trigger Condition filters only the `Full Device List` attachment using `@startsWith(...)` |
+| 1 | **Trigger** | "When a new email arrives (V3)" — watches for emails from a specific sender address with a subject containing a known keyword. A Trigger Condition filters only the target attachment using @startsWith(...)|
 | 2 | **Create file (SharePoint)** | Saves the attachment to a company shared folder with a dynamic monthly filename, for example: `VA Devices Report - March 2026.xlsx` |
 | 3 | **Run Script** | Executes `filter-va-devices.ts` against the newly created file using its dynamic ID — no hardcoded paths |
 
