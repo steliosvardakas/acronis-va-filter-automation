@@ -1,12 +1,12 @@
-# 🔄 Acronis VA Device Report Automation
+# 🔄 Acronis Virtual Appliance Device Report Automation
 
-An end-to-end, zero-touch automation that filters the daily Acronis full device list report and delivers a clean, VA-only Excel file to SharePoint — entirely within Microsoft 365, at no additional cost.
+An end-to-end, zero-touch automation that filters the monthly Acronis full device list report and delivers a clean, Virtual Aplliances-only Excel file to SharePoint — entirely within Microsoft 365, at no additional cost.
 
 ---
 
 ## 🧩 Problem Statement
 
-The organization receives a daily automated email from Acronis containing a full list of managed devices. However, only devices with **"-VA-"** in their name are operationally relevant.
+The organization receives a monthly automated email from Acronis containing a full list of managed devices. However, only devices with **"-VA-"** in their name are operationally relevant.
 
 Previously, this required a team member to:
 1. Open the Excel attachment manually
@@ -14,7 +14,7 @@ Previously, this required a team member to:
 3. Save the filtered file
 4. Upload it to SharePoint
 
-This was a **daily, repetitive, error-prone task** with no business value beyond the filtering itself.
+This was a **monthly, repetitive, error-prone task** with no business value beyond the filtering itself.
 
 ---
 
@@ -55,7 +55,7 @@ The flow consists of three core actions:
 | Step | Action | Detail |
 |------|--------|--------|
 | 1 | **Trigger** | "When a new email arrives (V3)" — watches for emails from `noreply-abc@cloud.acronis.com` with subject containing `"DAILY REPORT ON"`. A Trigger Condition filters only the `Full Device List` attachment using `@startsWith(...)` |
-| 2 | **Create file (SharePoint)** | Saves the attachment to `/Documents/01. Acronis/VA Devices Reports` with a dynamic monthly filename: `VA Devices Report - March 2026.xlsx` |
+| 2 | **Create file (SharePoint)** | Saves the attachment to a company shared folder with a dynamic monthly filename, for example: `VA Devices Report - March 2026.xlsx` |
 | 3 | **Run Script** | Executes `filter-va-devices.ts` against the newly created file using its dynamic ID — no hardcoded paths |
 
 ---
@@ -107,8 +107,6 @@ acronis-va-filter-automation/
 **Stylianos Vardakas**  
 Cyber Security Support Engineer  
 [LinkedIn](https://www.linkedin.com/in/stylianos-vardakas/) • [GitHub](https://github.com/steliosvardakas)
-
-*Built with Claude AI support, implemented and deployed in production — March 2026*
 
 ---
 
